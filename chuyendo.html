@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<H2>Chuyen 25 do C sang do F va do kenvin</H2>
+<p id="rs"></p>
+<script>
+    function Temperature(doC) {
+        this.doC=doC;
+        this.doF=function () {
+            return (doC*1.8)+32;
+        };
+        this.doK=function () {
+            return doC+273;
+        }
+    }
+    let temperature=new Temperature(25);
+    let ketqua=temperature.doF();
+    let kq=temperature.doK();
+    document.getElementById("rs").innerHTML="Do F= "+ketqua+"<br>"+"Do kenvin= "+kq
+</script>
+</body>
+</html>
